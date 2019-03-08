@@ -17,7 +17,6 @@ This business network defines:
 `redeem`
 
 **Event**
-`Wallet`
 `trade`
 
 We first create the `firm`s involved in the lifecycle of the comercial paper: MagnetoCorp, DigiBank, BigFund and HedgeMatic.
@@ -28,8 +27,7 @@ Create four `firm` participant:
 {
   "$class": "org.papernet.firm",
   "name": "MagnetoCorp",
-  "assets": 10000000,
-  "liabilities": 0
+  "balance": 10000000
 }
 ```
 
@@ -37,24 +35,21 @@ Create four `firm` participant:
 {
   "$class": "org.papernet.firm",
   "name": "DigiBank",
-  "assets": 10000000,
-  "liabilities": 0
+  "balance": 10000000
 }
 ```
 ```json
 {
   "$class": "org.papernet.firm",
   "name": "BigFund",
-  "assets": 10000000,
-  "liabilities": 0
+  "balance": 10000000
 }
 ```
 ```json
 {
   "$class": "org.papernet.firm",
   "name": "HedgeMatic",
-  "assets": 10000000,
-  "liabilities": 0
+  "balance": 10000000
 }
 ```
 
@@ -113,7 +108,8 @@ Finally the `redeem` transaction for paper 00001 represents the end of its lifec
 {
   "$class": "org.papernet.redeem",
   "id": "resource:org.papernet.paper#00001",
-  "redeemTime": "2020-11-30T20:39:10.142Z"
+  "redeemTime": "2020-11-30T20:39:10.142Z",
+  "coupon": 1.5
 }
 ```
 

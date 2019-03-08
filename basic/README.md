@@ -23,34 +23,26 @@ Create four `firm` participant:
 ```json
 {
   "$class": "org.papernet.firm",
-  "name": "MagnetoCorp",
-  "assets": 10000000,
-  "liabilities": 0
+  "name": "MagnetoCorp"
 }
 ```
 
 ```json
 {
   "$class": "org.papernet.firm",
-  "name": "DigiBank",
-  "assets": 10000000,
-  "liabilities": 0
+  "name": "DigiBank"
 }
 ```
 ```json
 {
   "$class": "org.papernet.firm",
-  "name": "BigFund",
-  "assets": 10000000,
-  "liabilities": 0
+  "name": "BigFund"
 }
 ```
 ```json
 {
   "$class": "org.papernet.firm",
-  "name": "HedgeMatic",
-  "assets": 10000000,
-  "liabilities": 0
+  "name": "HedgeMatic"
 }
 ```
 

@@ -20,8 +20,7 @@ namespace org.papernet
 
 participant firm identified by name {
   o String name
-  o Double assets default=10000000.0
-  o Double liabilities default=0.0
+  o Double balance default=10000000.0
 }
 
 asset paper identified by id {
@@ -48,12 +47,6 @@ transaction issue {
   o Double faceValue
 }
 
-event Wallet {
-  o String firm
-  o Double newAssets
-  o Double newLiabilities
-}
-
 transaction buy {
   --> paper id
   --> firm newOwner
@@ -62,16 +55,18 @@ transaction buy {
 }
 
 event trade {
-  o String oldOwner
-  o Double oldAssets
-  o Double oldLiabilities
-  o String newOwner
-  o Double newAssets
-  o Double newLiabilities
+  --> firm oldOwner
+  o Double oldOwnerOldBalance
+  o Double oldOwnerNewBalance
+  --> firm newOwner
+  o Double newOwnerOldBalance
+  o Double newOwnerNewBalance
+  
 }
 
 transaction redeem {
   --> paper id
   o DateTime redeemTime
+  o Double coupon default=1.5
 }
 
