@@ -1,10 +1,11 @@
 # Comercial paper Tutorial
 
 This is a summary of the [Comercial Paper Tutorial](https://hyperledger-fabric.readthedocs.io/en/release-1.4/tutorial/commercial_paper.html)
+Note that this tutorial correspond to FABRIC release 1.4 for other releases, in particular 2.0 there are changes to the tutorial.
 
 ## 1. start network using basic-network
 ```
-/.start.sh
+./start.sh
 ```
 inspect the network
 ```
@@ -131,10 +132,17 @@ node redeem.js
 
 OPEN QUESTION how can I take a look at the wallet?
 
+
+### 5. Look at last block in the Blockchain
+
+```
+docker exec peer0.org1.example.com peer channel getinfo -c mychannel
+```
+
 ## Cleanup
 
 Stop Fabric
-cd go/fabric/fabric-samples/basic-network
+cd fabric/fabric-samples/basic-network
 
 ```
 ./stop.sh
